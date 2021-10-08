@@ -5,14 +5,15 @@ src.setup(height=600, width=600)
 src.bgcolor('black')
 src.title('Snake Game')
 
-snakes = [Turtle() for i in range(3)]
+snake = [Turtle() for i in range(3)]
 for i in range(3):
-	snake = snakes[i]
-	snake.shape("square")
-	snake.color('white')
-	snake.pensize(1)
-	snake.shapesize(2,2)
-	snake.setpos(280,0)
+	block = snake[i]
+	block.shape("square")
+	block.color('white')
+	# default turtle size is 20px
+	block.penup()
+	# move each block 20px backwards
+	block.setpos(-20*i,0)
 
 
 
